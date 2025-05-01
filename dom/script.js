@@ -29,13 +29,27 @@ console.log(queryA1.innerText);
 let queryA3=document.querySelector("#first")
 console.dir(queryA3)
 let queryA4=document.querySelectorAll("#second")
-console.dir(queryA4)
-let child=document.querySelector("div").children
+console.dir(queryA4) 
+let child=document.querySelector("div")
 console.log(child)
 let queryA5=document.querySelector("div")
 console.dir(queryA5)
 console.log(queryA5.innerHTML)
-let queryA6=document.querySelector(".hid")
+let queryA6=document.querySelector(".hid");
 console.dir(queryA6);
 console.log(queryA6.innerText);
 console.log(queryA6.textContent);
+
+// qiuz
+let quiz1=document.querySelector("#quiz");
+console.dir(quiz1);
+quiz1.innerText=quiz1.innerText+" from apna college";
+
+let quiz2=document.querySelectorAll(".box1");
+quiz2[0].innerText=" new change 1";
+quiz2[1].innerText=" new change 2";
+quiz2[2].innerText=" new change 3";
+
+
+
+// quiz2.innerText=quiz2.innerText+" and also has on top"
