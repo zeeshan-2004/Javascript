@@ -50,6 +50,58 @@ quiz2[0].innerText=" new change 1";
 quiz2[1].innerText=" new change 2";
 quiz2[2].innerText=" new change 3";
 
+// quiz end
 
 
-// quiz2.innerText=quiz2.innerText+" and also has on top"
+// dom
+let quiz3=document.querySelector("#quiz");
+console.log(quiz3)
+let id=quiz3.getAttribute("id");
+console.log(id)
+let id1=quiz3.getAttribute("name");
+console.log(id1);
+let cl = document.querySelector(".box2");
+console.log(cl.getAttribute("class")); 
+console.log(cl.setAttribute("name","newname"));
+cl.style.backgroundColor="red"  ;
+cl.style.fontSize="26px"  ;
+cl.innerText="hello";
+
+// insert element
+let newBtn=document.createElement("button");
+newBtn.innerText="clickme"
+console.dir(newBtn)
+console.dir(newBtn.innerText)
+let ape=document.querySelector(".add");
+ape.append(newBtn);
+
+let newPre=document.createElement("h1");
+newPre.innerText="heading"
+let pre=document.querySelector(".pre");
+pre.prepend(newPre);
+
+let newBef=document.createElement("h2");
+newBef.innerText="sub heading"
+let bef=document.querySelector(".box2");
+bef.before(newBef);
+
+let newAft=document.createElement("p");
+newAft.innerText="this is para"
+let aft=document.querySelector("#quiz");
+aft.before(newAft);
+
+//delete element
+let del=document.querySelector(".del")
+del.remove();
+
+//quiz
+  let newBut=document.createElement("button");
+  newBut.innerText="click me";
+  newBut.style.backgroundColor="red";
+  newBut.style.color="white";
+  let add1=document.querySelector("body");
+  add1.prepend(newBut);
+
+  let cs=document.querySelector(".para");
+cs.classList.add("newClass");
+  
