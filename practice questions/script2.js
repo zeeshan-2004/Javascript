@@ -29,6 +29,56 @@ newPr.innerText="new para";
 par.prepend(newPr);
 
 
+// child nodes
+let ch=document.querySelector(".d");
+console.log(ch.children);
+console.log(ch.childNodes);
+console.log(ch.firstChild);
+console.log(ch.firstElementChild);
+console.log(ch.lastChild);
+console.log(ch.lastElementChild);
+let chng=document.querySelector(".d").children[1];
+chng.innerText="this is nw heading"
+console.log(chng);
+
+// }
+let items = document.querySelectorAll(".d");
+for (let item of items) {
+  for(let ch of item.children)
+  ch.classList.add("highlight");
+}
+let cr1=document.querySelector("h2");
+cr1.innerText="append heading";
+let nw=document.querySelector(".d");
+nw.appendChild(cr1);
+
+let ac=document.querySelectorAll(".app");
+for(let old of ac){
+  for(let nw of old.children){
+    nw.style.color="red";
+  }
+}
+
+let cn=document.querySelectorAll(".fr");
+let cnt=document.querySelector(".count");
+cnt.textContent=cn.length;
+console.log(cnt);
+
+let next=document.querySelectorAll(".count1")
+for(let i=0;i<next.length;i++){
+  next[i].innerText="update";
+}
+
+let elements = document.querySelectorAll("section *");
+elements.forEach(el => {
+  console.log(el.id);
+});
+
+let p = document.getElementById(".fir");
+let strong = document.createElement("strong");
+strong.textContent = p.textContent;
+p.textContent = "";           // clear original
+p.appendChild(strong);        // insert new
 
 
 
