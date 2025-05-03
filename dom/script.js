@@ -94,6 +94,16 @@ aft.before(newAft);
 let del=document.querySelector(".del")
 del.remove();
 
+
+//nodes
+console.log(document.body.childNodes);
+document.addEventListener("DOMContentLoaded", () => {
+  console.log(document.body.children);  });
+
+let ch=document.querySelector(".add");
+console.log(ch.childNodes[0].parentElement);
+console.log(document.body.firstElementChild);
+
 //quiz
   let newBut=document.createElement("button");
   newBut.innerText="click me";
@@ -101,6 +111,7 @@ del.remove();
   newBut.style.color="white";
   let add1=document.querySelector("body");
   add1.prepend(newBut);
+
 
   let cs=document.querySelector(".para");
 cs.classList.add("newClass");
