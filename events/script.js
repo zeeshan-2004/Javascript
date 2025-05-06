@@ -114,18 +114,18 @@ key2.addEventListener("keyup",(e)=>{
 
 // form events
 let form=document.querySelector("form");
-// form.addEventListener("submit",()=>{
-//     event.preventDefault();
-//     console.log("you submit form")
-// })
-// form.addEventListener("change",()=>{
-//     event.preventDefault();
-//     console.log("you submit form")
-// })
-// form.addEventListener("input",()=>{
-//     event.preventDefault();
-//     console.log("changed value",event.target.value)
-// })
+form.addEventListener("submit",()=>{
+    event.preventDefault();
+    console.log("you submit form")
+})
+form.addEventListener("change",()=>{
+    event.preventDefault();
+    console.log("you submit form")
+})
+form.addEventListener("input",()=>{
+    event.preventDefault();
+    console.log("changed value",event.target.value)
+})
 
 form.addEventListener("reset",()=>{
     event.preventDefault();

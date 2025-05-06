@@ -74,7 +74,7 @@ elements.forEach(el => {
   console.log(el.id);
 });
 
-let p = document.getElementById(".fir");
+let p = document.querySelector(".fir");
 let strong = document.createElement("strong");
 strong.textContent = p.textContent;
 p.textContent = "";           // clear original
@@ -82,3 +82,35 @@ p.appendChild(strong);        // insert new
 
 
 
+// events 
+let bc=document.querySelector(".ms");
+bc.addEventListener("click",()=>{
+document.body.style.backgroundColor="red";
+})
+
+let text=document.querySelector(".text")
+text.addEventListener("keydown",()=>{
+ console.log(event.target.value)
+})
+
+let frm=document.querySelector(".frm");
+frm.addEventListener("submit",()=>{
+  event.preventDefault();
+  let inp=document.querySelector(".next").value;
+  alert(inp);
+})
+
+let im=document.querySelector(".img");
+im.addEventListener("dblclick",()=>{
+  im.style.visibility="hidden";
+})
+
+let pa=document.querySelector(".para");
+pa.addEventListener("mouseover",()=>{
+  pa.innerText="after changing";
+  
+})
+pa.addEventListener("mouseleave",()=>{
+  pa.innerText=" ";
+
+})

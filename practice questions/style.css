@@ -9,3 +9,13 @@
 .togl{
     background-color: antiquewhite;
 }
+.img{
+    height:100px
+}
+.para{
+    height:100px;
+    width: 100px;
+    border:2px solid black;
+    padding:20px;
+    background-color: navajowhite;
+}
