@@ -12,7 +12,7 @@
     border:2px solid black;
     color:red;
 }
-.key{
+.keya{
     height:100px;
     width:100px;
     background-color: antiquewhite;
@@ -22,4 +22,22 @@
 .tab{
     border:5px solid black;
     padding: 10px;
+}
+
+.container{
+    padding:20px;
+    margin:20px;
+    background-color: antiquewhite;
+
+}
+.child_container{
+    padding:20px;
+    margin:20px;
+    background-color: rgb(146, 116, 72);
+}
+.child{
+    padding:20px;
+    margin:20px;
+    background-color: rgb(197, 218, 218);
+    cursor: pointer;
 }

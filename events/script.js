@@ -100,9 +100,9 @@ ev.addEventListener("contextmenu",()=>{
 
 
 // keyborad events
-let key1=document.querySelector(".keyb");
-key1.addEventListener("keypress",()=>{
-     console.log("kyepress");
+let key1=document.querySelector(".key");
+document.addEventListener("keypress",(e)=>{
+     console.log(e,e.key,e.keyCode);
 })
 let key2=document.querySelector(".tab");
 key2.addEventListener("keydown",(e)=>{
@@ -116,38 +116,98 @@ key2.addEventListener("keyup",(e)=>{
 let form=document.querySelector("form");
 form.addEventListener("submit",()=>{
     event.preventDefault();
-    console.log("you submit form")
+    console.log("you submit form");
 })
 form.addEventListener("change",()=>{
     event.preventDefault();
-    console.log("you submit form")
+    console.log("change th data")
 })
 form.addEventListener("input",()=>{
     event.preventDefault();
-    console.log("changed value",event.target.value)
+    console.log("input data",event.target.value)
 })
 
 form.addEventListener("reset",()=>{
     event.preventDefault();
-    console.log("reset",)
+    console.log("reset",);
+    form.reset();
 })
 form.addEventListener("invalid",()=>{
     event.preventDefault();
     console.log("invalid",event.target)
 },true);
 
-
 let form1=document.querySelector(".ch");
-// form1.addEventListener("change",()=>{
-//     console.log("chnage value",event.target.value)
-// });
-// form1.addEventListener("focus",()=>{
-//     console.log("focus",)
-// });
-// form1.addEventListener("blur",()=>{
-//     console.log("blur")
-// });
-form1.addEventListener("reset",()=>{
-    console.log("reset")
+form1.addEventListener("change",()=>{
+    console.log("chnage value",event.target.value)
 });
+form1.addEventListener("focus",()=>{
+    console.log("focus",)
+});
+form1.addEventListener("blur",()=>{
+    console.log("blur")
+});
+// form1.addEventListener("reset",()=>{
+//     console.log("reset")
+// });
 
+// bubbling
+document.querySelector(".container").addEventListener("click",(e)=>{
+    alert("this is container div")
+})
+document.querySelector(".child_container").addEventListener("click",(e)=>{
+    e.stopPropagation();
+    alert("this is child co div")
+})
+document.querySelector(".child").addEventListener("click",(e)=>{
+    e.stopPropagation();
+    alert("this is child")
+})
+
+
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`;}
+
+ let a = setInterval(() => {
+            document.querySelector(".child").style.background =getRandomColor();
+        }, 1000);
+
+        console.log(a);
+ let b = setInterval(() => {
+            document.querySelector(".child_container").style.background ="red";
+        }, 1000);
+
+        console.log(b);
+
+ 
+ // delegation
+        
+        document.getElementById("list").addEventListener("click", function () {
+            console.log("Clicked");
+          });
+          
+          // window events
+          window.addEventListener("load", () => {
+            console.log("Page fully loaded with all content!");
+          });
+          document.addEventListener("DOMContentLoaded", () => {
+            console.log("DOM fully loaded!");
+          });
+                   
+          window.addEventListener("resize", () => {
+            console.log(`Window resized to ${window.innerWidth}x${window.innerHeight}`);
+          });
+          window.addEventListener("scroll", () => {
+            console.log("Page is scrolling...");
+          });
+          window.addEventListener("unload", () => {
+            console.log("User is leaving the page...");
+          });
+          window.addEventListener("beforeunload", (e) => {
+            e.preventDefault(); // Required for some browsers
+            e.returnValue = ""; // Standard way to trigger a prompt
+          });
+                              
