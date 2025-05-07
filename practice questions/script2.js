@@ -114,3 +114,57 @@ pa.addEventListener("mouseleave",()=>{
   pa.innerText=" ";
 
 })
+
+let btn=document.querySelector(".btn");
+let mode="dark";
+btn.addEventListener("click",()=>{
+  
+  document.body.classList.toggle("dark")
+    
+})
+
+let coar=document.querySelector(".box");
+coar.addEventListener("mouseover",()=>{
+  let x=event.offsetX;
+  let y=event.offsetY;
+  console.log(`"x coardinate" ${x} "y coardinate ${y}`)
+})
+coar.addEventListener("mouseleave",()=>{
+  coar.innerText="";
+});
+
+let inp=document.querySelector(".inp");
+let acs=document.querySelector(".pa");
+inp.addEventListener("keypress",()=>{
+  if(event.key=="Enter"){
+    pa.tabindex=1;
+    console.log(event.target.value);
+    
+  }
+}
+)
+
+let inpu=document.querySelector(".box");
+// inpu.addEventListener("keypress",()=>{
+  
+//   console.log( event.target.value)
+// })
+inpu.addEventListener("keypress",()=>{
+  
+  console.log( event.key);
+})
+
+let frm1=document.querySelector(".frm1")
+frm1.addEventListener("submit",()=>{
+  event.preventDefault();
+  let nw=document.querySelector(".p1")
+  nw.addEventListener("keypress",()=>{
+    if(event.key==submit){
+      nw.tabindex=1;
+      nw.innerText="thankyou"
+      console.log(nw)
+     }
+  })
+ 
+
+})

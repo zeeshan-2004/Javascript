@@ -19,3 +19,19 @@
     padding:20px;
     background-color: navajowhite;
 }
+
+body.dark{
+   background-color: black; 
+}
+
+light{
+    background-color: white;
+}
+
+.box{
+    height:100px;
+    width:100px;
+    padding:010px;
+    background-color: antiquewhite;
+    border:2px solid black;
+}
