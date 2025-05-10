@@ -48,7 +48,6 @@ boxes.forEach((box) =>{
         box.disabled=true;
         checkWinner();
          count++;
-         console.log("count",count);
     let iswinner=checkWinner();
      if(count===9 && !iswinner ){
    draw();
@@ -80,7 +79,7 @@ const reset=()=>{
     enable();
      msg_con.classList.add("hide");
     drw_con.classList.add("hidd");
-     box.style.background="beige"
+     box.style.background="beige";
    }
   
 
@@ -105,7 +104,7 @@ const checkWinner= ()=>{
 //   console.log(
 //     boxes[pattern[0]].innerText,
 //     boxes[pattern[1]].innerText,
-//     boxes[pattern[2]].innerText);  access all indexes of buttons
+//     boxes[pattern[2]].innerText);  access all indexes of boxes
    let pos1val=    boxes[pattern[0]].innerText;
     let pos2val=    boxes[pattern[1]].innerText;
     let pos3val=  boxes[pattern[2]].innerText;
