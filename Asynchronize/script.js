@@ -192,7 +192,7 @@ function api(){
 
 async function weat(){
 await api(); //1st call
-await api(); // 2nd call after 12t complete
+await api(); // 2nd call after 1st complete
 }
 
 weat();
