@@ -11,9 +11,22 @@ const getFacts=async ()=>{  // async function
     console.log(response.status)
     let data= await response.json(); // convert json into js obj
     console.log(data);
-    console.log(data.id);// print proerty of object
-    getPara.innerText=data.id;
+    console.log(data.url);// print proerty of object
+    getPara.innerText=data.url;
    
 }
 
 btn.addEventListener("click",getFacts);
+
+// using promise chain
+
+function obj(){
+    fetch(url)
+    .then((response)=>{
+ return    response.json();
+    }).then((data)=>{
+      console.log(data.id)
+    });
+
+}
+obj();
