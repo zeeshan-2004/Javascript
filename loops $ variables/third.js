@@ -99,6 +99,8 @@ console.log(res)
 
 let h="coding"+fir + sec;
 console.log(h);
+let var1="string" + 123;
+console.log(var1);
 
 let l="hello";
 console.log(l.replace("h","y"));
