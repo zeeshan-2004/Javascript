@@ -16,11 +16,11 @@ sum(20,30);
 
 
 function sum(a,b){
-d=a+b;
+let d=a+b;
 return d;
 }
 sum(100,130);
-let c=s;
+let c=sum();
 console.log(c)
 
 // arrow function
@@ -92,7 +92,6 @@ arr.forEach(function printValue(val){
  console.log(val)
  } );
 
- let ar=[ 10, 20, 30]
  arr.forEach( function printval(val,ind,arr) {
  console.log(val,ind,arr)} ) 
  
@@ -138,7 +137,7 @@ let finar=marks.filter( (val)=>{
 })
  console.log(finar)
 
-//  let h= prompt("enter a number"); because promy but part of program
+ let h= prompt("enter a number"); //because promy but part of program
  let lastarr=[];
 
  for(let i=1;i<=h;i++){
