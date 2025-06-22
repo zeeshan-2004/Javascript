@@ -30,3 +30,79 @@ function obj(){
 
 }
 obj();
+
+// practice questions
+
+
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then(data => {
+    console.log('Post data:', data);
+  })
+  .catch(error => {
+    console.error('Error fetching post:', error);
+  });
+
+
+   
+
+fetch('https://jsonplaceholder.typicode.com/invalid-endpoint')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => {
+    console.error('Fetch failed:', error.message);
+  });
+
+  // post
+
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+     title: 'My Custom Post Title',
+    body: 'This is the body content of the post.',
+    userId: 101
+  })
+})
+.then(response=>response.json())
+.then(data=>{console.log(data)})
+.catch(reject=>{
+ console.log(reject)
+})
+ 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response=>response.json())
+.then(user=>{
+  user.forEach(user=>{
+console.log("username:",user)
+  })
+ 
+})
+.catch(reject=>{
+  console.log(reject)
+}
+
+)
+
+//using async await
+
+let as1=async()=>{
+try{
+ let aw1=await fetch("https://jsonplaceholder.typicode.com/todos/1");
+let a=await aw1.json();
+console.log(a);
+}
+
+catch(error){
+console.log(error)
+};
+}
+as1();
